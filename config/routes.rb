@@ -1,4 +1,6 @@
 Html5primer::Application.routes.draw do
+  resources :brainstorms
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

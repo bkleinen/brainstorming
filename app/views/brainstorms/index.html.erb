@@ -1,0 +1,37 @@
+<h1>Listing brainstorms</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Date</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Description</th>
+    <th>No people</th>
+    <th>No ideas</th>
+    <th>Color</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @brainstorms.each do |brainstorm| %>
+  <tr>
+    <td><%= brainstorm.title %></td>
+    <td><%= brainstorm.date %></td>
+    <td><%= brainstorm.start %></td>
+    <td><%= brainstorm.end %></td>
+    <td><%= brainstorm.description %></td>
+    <td><%= brainstorm.no_people %></td>
+    <td><%= brainstorm.no_ideas %></td>
+    <td><%= brainstorm.color %></td>
+    <td><%= link_to 'Show', brainstorm %></td>
+    <td><%= link_to 'Edit', edit_brainstorm_path(brainstorm) %></td>
+    <td><%= link_to 'Destroy', brainstorm, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Brainstorm', new_brainstorm_path %>

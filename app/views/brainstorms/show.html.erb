@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @brainstorm.title %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @brainstorm.date %>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%= @brainstorm.start %>
+</p>
+
+<p>
+  <b>End:</b>
+  <%= @brainstorm.end %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @brainstorm.description %>
+</p>
+
+<p>
+  <b>No people:</b>
+  <%= @brainstorm.no_people %>
+</p>
+
+<p>
+  <b>No ideas:</b>
+  <%= @brainstorm.no_ideas %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%= @brainstorm.color %>
+</p>
+
+
+<%= link_to 'Edit', edit_brainstorm_path(@brainstorm) %> |
+<%= link_to 'Back', brainstorms_path %>
