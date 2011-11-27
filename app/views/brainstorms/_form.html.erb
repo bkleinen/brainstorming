@@ -10,26 +10,37 @@
       </ul>
     </div>
   <% end %>
-
+  
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
+<!--
   <div class="field">
     <%= f.label :date %><br />
     <%= f.date_select :date %>
   </div>
+-->
   <div class="field">
-    <%= f.label :start %><br />
-    <%= f.datetime_select :start %>
+    <label for = "brainstorm_date">Date</label>
+    <input type ="date" name ="brainstorm[date]" id ="brainstorm_date"
+           value ="<%=Date.today.rfc3339%>">
   </div>
+
+  <div class="field"> 
+    <%= f.label :start %><br />
+    <input type ="datetime" id = "brainstorm_start" 
+          name = "brainstorm[start]"
+           value ="<%=Time.now%>">
+  </div>
+
   <div class="field">
     <%= f.label :end %><br />
     <%= f.datetime_select :end %>
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
   </div>
   <div class="field">
     <%= f.label :no_people %><br />
@@ -39,10 +50,9 @@
     <%= f.label :no_ideas %><br />
     <%= f.number_field :no_ideas %>
   </div>
-  <div class="field">
-    <%= f.label :color %><br />
-    <%= f.text_field :color %>
-  </div>
+  <label for ="brainstorm_color">Background Color for this Brainstorm</label>
+  <input type = "color" id = "brainstorm_color" 
+         name = "brainstorm[color]" value = "<%=@brainstorm.color%>">
   <div class="actions">
     <%= f.submit %>
   </div>
